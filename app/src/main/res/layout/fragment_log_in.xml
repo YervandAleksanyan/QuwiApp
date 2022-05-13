@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/log_in_fragment"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/log_in_field"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="@dimen/marginTop150"
+        android:layout_marginEnd="16dp"
+        android:hint="@string/email_hint"
+        android:imeOptions="actionNext"
+        android:inputType="textEmailAddress"
+        android:textAlignment="center"
+        android:textSize="@dimen/textSize20"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/password_field"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="@dimen/marginTop10"
+        android:layout_marginEnd="16dp"
+        android:hint="@string/passwordHint"
+        android:imeOptions="actionDone"
+        android:inputType="textPassword"
+        android:textAlignment="center"
+        android:textSize="@dimen/textSize20"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/log_in_field"
+        app:layout_constraintTop_toBottomOf="@id/log_in_field" />
+
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/log_in_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/marginTop10"
+        android:text="@string/login"
+        app:layout_constraintEnd_toEndOf="@id/password_field"
+        app:layout_constraintStart_toStartOf="@id/password_field"
+        app:layout_constraintTop_toBottomOf="@id/password_field" />
+
+
+    <ProgressBar
+        android:id="@+id/progress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/log_in_button" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/chat_image"
+        android:layout_width="@dimen/width70"
+        android:layout_height="@dimen/height70"
+        android:layout_marginStart="@dimen/marginStart10"
+        android:layout_marginTop="@dimen/marginTop10"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:src="@drawable/ic_launcher_background" />
+
+    <TextView
+        android:id="@+id/chat_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/marginStart10"
+        android:textColor="@color/black"
+        android:textSize="@dimen/textSize20"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@id/chat_image"
+        app:layout_constraintTop_toTopOf="@id/chat_image"
+        tools:text="Test" />
+
+    <TextView
+        android:id="@+id/last_message"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/marginTop10"
+        android:textColor="#A0A2A3"
+        android:textSize="@dimen/textSize18"
+        app:layout_constraintStart_toStartOf="@id/chat_name"
+        app:layout_constraintTop_toBottomOf="@id/chat_name"
+        tools:text="Last message" />
+
+    <ImageView
+        android:id="@+id/pin_icon"
+        android:layout_width="@dimen/width20"
+        android:layout_height="@dimen/height20"
+        android:layout_marginEnd="@dimen/marginEnd20"
+        android:src="@drawable/ic_baseline_push_pin_24"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/last_message"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/last_message"
+        tools:visibility="visible" />
+
+    <TextView
+        android:id="@+id/message_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/marginEnd20"
+        android:textColor="#A0A2A3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/chat_name"
+        tools:text="13 Apr"
+        tools:visibility="visible" />
+
+    <ImageView
+        android:id="@+id/seen_message_icon"
+        android:layout_width="@dimen/width20"
+        android:layout_height="@dimen/height20"
+        android:layout_marginEnd="@dimen/marginEnd10"
+        android:src="@drawable/ic_vector"
+        android:visibility="gone"
+        app:layout_constraintEnd_toStartOf="@id/message_time"
+        app:layout_constraintTop_toTopOf="@id/message_time"
+        app:tint="#55B146"
+        tools:visibility="visible" />
+
+    <ImageView
+        android:id="@+id/seen_message_icon2"
+        android:layout_width="@dimen/width20"
+        android:layout_height="@dimen/height20"
+        android:layout_marginEnd="@dimen/marginEnd8"
+        android:src="@drawable/ic_vector"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="@id/seen_message_icon"
+        app:layout_constraintTop_toTopOf="@id/message_time"
+        app:tint="#55B146"
+        tools:visibility="visible" />
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="0dp"
+        android:layout_height="2dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="15dp"
+        android:background="#F8F8F8"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/last_message"
+        app:layout_constraintTop_toBottomOf="@+id/last_message" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Quwi</string>
+    <string name="login">LogIn</string>
+    <string name="email_hint">Email</string>
+    <string name="passwordHint">Password</string>
+    <string name="login_inputs_validation_message">Please fill in all fields</string>
+    <string name="chats_toolbar_title">Messages</string>
+    <string name="login_fragment_toolbar_title">Login</string>
+    <string name="logout_title">Logout</string>
+    <string name="chats_empty_message">You don\'t have any chats</string>
+</resources>
